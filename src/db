@@ -1,0 +1,43 @@
+INSERT INTO users (name_user) VALUES ('Oleg');
+INSERT INTO users (name_user) VALUES ('Alise');
+INSERT INTO users (name_user) VALUES ('Igor');
+INSERT INTO users (name_user) VALUES ('Igor');
+INSERT INTO users (name_user) VALUES ('Alex');
+INSERT INTO users (name_user) VALUES ('John');
+INSERT INTO users (name_user) VALUES ('Ura');
+INSERT INTO users (name_user) VALUES ('Miki');
+
+SELECT * FROM projects;
+SELECT * FROM users;
+SELECT * FROM project_users;
+SELECT * FROM projects WHERE name ='Igor';
+SELECT * FROM projects ORDER BY name;
+SELECT * FROM projects ORDER BY name DESC;
+
+UPDATE projects SET name ='Java';
+UPDATE projects SET name ='Java Script' WHERE id<5;
+UPDATE projects SET name ='C++' Where id <8 AND id>5;
+
+DELETE FROM projects WHERE id=3;
+DELETE FROM projects WHERE id=8;
+
+UPDATE projects SET user_id=3 WHERE id=5;
+UPDATE projects SET user_id=2 WHERE id<5;
+
+INSERT INTO project_users (project_id, user_id) VALUES (1,2);
+INSERT INTO project_users (project_id, user_id) VALUES (2,3);
+INSERT INTO project_users (project_id, user_id) VALUES (5,4);
+INSERT INTO project_users (project_id, user_id) VALUES (5,5);
+INSERT INTO project_users (project_id, user_id) VALUES (6,8);
+INSERT INTO project_users (project_id, user_id) VALUES (1,10);
+INSERT INTO project_users (project_id, user_id) VALUES (6,12);
+INSERT INTO project_users (project_id, user_id) VALUES (5,15);
+INSERT INTO project_users (project_id, user_id) VALUES (1,16);
+
+SELECT * FROM project_users LIMIT 5 OFFSET 5;
+
+SELECT *
+FROM project_users where project_users.project_id=1;
+
+SELECT *
+FROM project_users where user_id=4;
