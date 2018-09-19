@@ -15,8 +15,8 @@ public class UserDaoImpl implements UserDao {
     private static final String INSERT = "INSERT INTO users (name_user) VALUES (?)";
 
     /**
-     * {@inheritDoc}.
-     */
+    * {@inheritDoc}.
+    */
     @Override
     public void save(User user) {
         try (Connection connection = DatabaseSource.getConnection();
@@ -27,6 +27,5 @@ public class UserDaoImpl implements UserDao {
             e.printStackTrace();
         }
     }
-
 
 }

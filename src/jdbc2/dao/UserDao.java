@@ -6,11 +6,10 @@ import java.util.List;
 
 public interface UserDao {
 
-      /**
-     * Save user
-     *
-     */
+    /**
+    * Save user
+    *
+    */
     void save(User user);
-
 
 }

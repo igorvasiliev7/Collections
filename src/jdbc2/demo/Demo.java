@@ -1,6 +1,5 @@
-package jdbc2.Demo;
+package jdbc2.demo;
 
-import jdbc2.dao.impl.ProjectUserDaoImpl;
 import jdbc2.model.Project;
 import jdbc2.model.User;
 
