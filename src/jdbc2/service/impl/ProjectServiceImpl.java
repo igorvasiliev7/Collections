@@ -8,6 +8,6 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public void addProjAndSay(Project project) {
         new ProjectDaoImpl().save(project);
-        System.out.println("Hello");
+        System.out.println("Hello Project");
     }
 }
