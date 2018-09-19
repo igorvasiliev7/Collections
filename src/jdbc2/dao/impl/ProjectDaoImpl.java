@@ -1,11 +1,9 @@
 package jdbc2.dao.impl;
 
-
 import jdbc2.dao.ProjectDao;
 import jdbc2.datasource.DatabaseSource;
 import jdbc2.model.Project;
 import jdbc2.model.User;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -29,13 +27,13 @@ public class ProjectDaoImpl implements ProjectDao {
     */
     @Override
     public void save(Project project) {
-            try (Connection connection = DatabaseSource.getConnection();
-                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROJ)) {
-                preparedStatement.setString(1, project.getName());
-                preparedStatement.execute();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        try (Connection connection = DatabaseSource.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PROJ)) {
+            preparedStatement.setString(1, project.getName());
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
